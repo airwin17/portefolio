@@ -1,17 +1,32 @@
-
-
-
+@import "scss/services.scss";
+@import "scss/navBar.scss";
+@import "./scss/dropDown.scss";
+@import "./scss/skillItem.scss";
+@import "scss/skillSection.scss";
+@import "scss/homeSection.scss";
 %icon{
     color:var(--background-solid);
     margin-bottom: 0;
 }
 :root{
-    --background:#1E3050;
+    --background:rgb(31, 49, 81);
+    --background-second:rgb(37 58 96);
     --background-solid:white;
     --background-text:white;
     --normalIcon:20px;
     --navWidth:50px;
     --mediaWidth:50px;
+}
+@font-face {
+    font-family: "Montserrat";
+    src: url("./assets/font/Montserrat-VariableFont_wght.ttf");
+}
+a:focus{
+    border: 0px;
+}
+p, h1,h2,h3{
+    font-family: "Montserrat";
+    color: var(--background-text);
 }
 @keyframes iconAnimation {
     from{
@@ -29,122 +44,18 @@
         font-size: calc(var(--normalIcon) + 5px);
     }
 }
+html{
+    position: relative;
+}
 body{
     background-color: var(--background);
-    margin-left: calc(var(--navWidth) + 20px);
-    margin-right: calc(var(--mediaWidth) + 20px);
-}
-nav {
-    text-align: center;
-    display:flex;
-    flex-direction: column;
-    width: var(--navWidth);
-    position: absolute;
-    left: 0;
-    top:0;
-    bottom: 0;
-    justify-content: center;
-    box-shadow: 2px 7px 0px rgba(0,0,0,0.2);
-    >a>i{
-        @extend %icon;
-        margin: 5px 5px 0px 5px;
-        font-size: var(--normalIcon);
-        height: 30px;
-        animation-name: iconAnimation;
-        animation-duration: 100ms;
-        animation-iteration-count: 1;
-        animation-timing-function: linear;
-        &:hover{
-            font-size: calc(var(--normalIcon) + 5px);
-            animation-name: reverseIconAnimation;
-            animation-duration: 150ms;
-            animation-iteration-count: 1;
-            animation-timing-function: linear;
-        }
-    }
-
-}
-a:focus{
-    border: 0px;
-}
-p, h1,h2,h3{
-    font-family: "Montserrat";
-    color: var(--background-text);
-}
-.dropdown{
-    width: 100%;
-    >button{
-        color:var(--background-text);
-        border:0px;
-        background-color: var(--background);
-        width: 100%;
-        margin: 10px auto;
-        display: grid;
-        grid-template-columns: min-content auto min-content;
-        justify-items: start;
-        box-shadow: 0px 4px 5px 0px rgba(0,0,0,0.5);
-        align-items: center;
-        border-radius: 5px;
-        >i{
-            position:relative;
-            top:3px;
-        }
-        >h2{
-            font-size: 16px;
-            font-weight: 500;
-            margin: 5px 10px 0 10px;
-        }
-        >svg{
-            fill:var(--background-solid);
-            width: 25px;
-            height: 25px;
-        }
-    }
-    >div{
-        overflow: hidden;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-    
-}
-.skill-content-item{
-    display: grid;
-    align-items: center;
-    grid-template-columns: 30px auto;
-    margin: 10px;
-    >i{
-        color: var(--background-solid);
-        margin: 0;
-        grid-column: 1/2;
-        font-size: 30px;
-        height: auto;
-    }
-    >svg{
-        fill: var(--background-solid);
-        margin: 0;
-        grid-column: 1/2;
-        aspect-ratio: 1/1;
-        width: 100%;
-    }
-    div{
-        grid-column: 2/3;
-        margin-left: 10px;
-        i{
-            margin-bottom: 0;
-        }
-    }
-    @media (max-width:400px) {
-        
-    }
+    margin-left: calc(var(--navWidth));
+    margin-right: calc(var(--mediaWidth));
+    margin-top: 0;
 }
 i{
     @extend %icon;
     margin: 5px;
     font-size: var(--normalIcon);
     height: 25px;
-}
-@font-face {
-    font-family: "Montserrat";
-    src: url("./assets/font/Montserrat-VariableFont_wght.ttf");
 }

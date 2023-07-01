@@ -1,0 +1,30 @@
+nav {
+    text-align: center;
+    display:flex;
+    flex-direction: column;
+    width: var(--navWidth);
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top:0;
+    bottom: 0;
+    justify-content: center;
+    /*box-shadow: 2px 7px 0px rgba(0,0,0,0.2);*/
+    >a>i{
+        @extend %icon;
+        margin: 5px 5px 0px 5px;
+        font-size: var(--normalIcon);
+        height: 30px;
+        animation-name: iconAnimation;
+        animation-duration: 100ms;
+        animation-iteration-count: 1;
+        animation-timing-function: linear;
+        &:hover{
+            font-size: calc(var(--normalIcon) + 5px);
+            animation-name: reverseIconAnimation;
+            animation-duration: 150ms;
+            animation-iteration-count: 1;
+            animation-timing-function: linear;
+        }
+    }
+}

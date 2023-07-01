@@ -1,37 +1,19 @@
-i, nav > a > i {
+.list-div {
   color: var(--background-solid);
-  margin-bottom: 0;
 }
 
-:root {
-  --background:#1E3050;
-  --background-solid:white;
-  --background-text:white;
-  --normalIcon:20px;
-  --navWidth:50px;
-  --mediaWidth:50px;
+.list > li {
+  font-family: "Montserrat";
+  /*list-style: none;*/
 }
 
-@keyframes iconAnimation {
-  from {
-    font-size: clac(var(--normalIcon)5px);
-  }
-  to {
-    font-size: var(--normalIcon);
-  }
+#services {
+  padding: 10px;
+  /*box-shadow: 0px 2px 5px #00000085;*/
+  background-color: var(--background-second);
 }
-@keyframes reverseIconAnimation {
-  from {
-    font-size: var(--normalIcon);
-  }
-  to {
-    font-size: calc(var(--normalIcon) + 5px);
-  }
-}
-body {
-  background-color: var(--background);
-  margin-left: calc(var(--navWidth) + 20px);
-  margin-right: calc(var(--mediaWidth) + 20px);
+#services h1 {
+  margin: 10px 5px;
 }
 
 nav {
@@ -39,12 +21,13 @@ nav {
   display: flex;
   flex-direction: column;
   width: var(--navWidth);
-  position: absolute;
+  height: 100%;
+  position: fixed;
   left: 0;
   top: 0;
   bottom: 0;
   justify-content: center;
-  box-shadow: 2px 7px 0px rgba(0, 0, 0, 0.2);
+  /*box-shadow: 2px 7px 0px rgba(0,0,0,0.2);*/
 }
 nav > a > i {
   margin: 5px 5px 0px 5px;
@@ -63,17 +46,9 @@ nav > a > i:hover {
   animation-timing-function: linear;
 }
 
-a:focus {
-  border: 0px;
-}
-
-p, h1, h2, h3 {
-  font-family: "Montserrat";
-  color: var(--background-text);
-}
-
 .dropdown {
   width: 100%;
+  margin: 10px;
 }
 .dropdown > button {
   color: var(--background-text);
@@ -136,15 +111,78 @@ p, h1, h2, h3 {
 .skill-content-item div i {
   margin-bottom: 0;
 }
-i {
-  margin: 5px;
-  font-size: var(--normalIcon);
-  height: 25px;
+#competences {
+  padding: 10px;
+}
+
+#accueil {
+  background-color: var(--background-second);
+  padding: 10px;
+}
+
+.home-p {
+  padding: 10px;
+}
+
+i, nav > a > i {
+  color: var(--background-solid);
+  margin-bottom: 0;
+}
+
+:root {
+  --background:rgb(31, 49, 81);
+  --background-second:rgb(37 58 96);
+  --background-solid:white;
+  --background-text:white;
+  --normalIcon:20px;
+  --navWidth:50px;
+  --mediaWidth:50px;
 }
 
 @font-face {
   font-family: "Montserrat";
   src: url("./assets/font/Montserrat-VariableFont_wght.ttf");
+}
+a:focus {
+  border: 0px;
+}
+
+p, h1, h2, h3 {
+  font-family: "Montserrat";
+  color: var(--background-text);
+}
+
+@keyframes iconAnimation {
+  from {
+    font-size: clac(var(--normalIcon)5px);
+  }
+  to {
+    font-size: var(--normalIcon);
+  }
+}
+@keyframes reverseIconAnimation {
+  from {
+    font-size: var(--normalIcon);
+  }
+  to {
+    font-size: calc(var(--normalIcon) + 5px);
+  }
+}
+html {
+  position: relative;
+}
+
+body {
+  background-color: var(--background);
+  margin-left: calc(var(--navWidth));
+  margin-right: calc(var(--mediaWidth));
+  margin-top: 0;
+}
+
+i {
+  margin: 5px;
+  font-size: var(--normalIcon);
+  height: 25px;
 }
 
 /*# sourceMappingURL=style.css.map */
