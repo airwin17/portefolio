@@ -1,13 +1,23 @@
-nav {
-    text-align: center;
-    display:flex;
-    flex-direction: column;
-    width: var(--navWidth);
-    height: 100%;
+nav{
     position: fixed;
     left: 0;
     top:0;
     bottom: 0;
+}
+#theme-but{
+    background-color: var(--background);
+    border: 0;
+    position: absolute;
+    bottom:0;
+    left:0;
+    right: 0;
+}
+.nav {
+    text-align: center;
+    display:flex;
+    flex-direction: column;
+    width: var(--navWidth);
+    /*height: 100%;*/
     justify-content: center;
     /*box-shadow: 2px 7px 0px rgba(0,0,0,0.2);*/
     >a>i{

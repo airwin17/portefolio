@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
+    <!--swiper-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <!----------------------------------------------->
     <link href="./style.css" rel="stylesheet">
     <meta charset="UTF-8">
     <script src="./js/index.js" type="text/javascript" defer></script>
@@ -10,25 +14,32 @@
 </head>
 <body>
     <header>
-        <nav class="nav">
-            <a href="#accueil">
-                <i class="fa-light fa-house"></i>
-            </a>
-            <!--<a href="#aPropos">
-                <i class="fa-light fa-user"></i>
-            </a>-->
-            <a href="#competences">
-                <i class="fa-light fa-star"></i>
-            </a>
-            <a href="#services">
-                <i class="far fa-bell-concierge"></i>
-            </a>
-            <a href="#portfolio">
-                <i class="fa-light fa-briefcase"></i>
-            </a>
-            <a href="#contact">
-                <i class="fa-light fa-address-card"></i>
-            </a>
+        <nav>
+            <div class="nav">
+                <a href="#accueil">
+                    <i class="fa-light fa-house"></i>
+                </a>
+                <!--<a href="#aPropos">
+                    <i class="fa-light fa-user"></i>
+                </a>-->
+                <a href="#competences">
+                    <i class="fa-light fa-star"></i>
+                </a>
+                <a href="#services">
+                    <i class="far fa-bell-concierge"></i>
+                </a>
+                <a href="#portfolio">
+                    <i class="fa-light fa-briefcase"></i>
+                </a>
+                <a href="#contact">
+                    <i class="fa-light fa-address-card"></i>
+                </a>
+            </div>
+            <button id="theme-but">
+                <i class="fa-light fa-sun" style="display: block;"></i>
+                <i class="fa-regular fa-moon" style="display: none;"></i>
+            </button>
+            
         </nav>
     </header>
     <main>
@@ -229,7 +240,28 @@
                 </ul>
             </div>
         </section>
-        <section id="portfolio"></section>
+        <section id="portfolio">
+            <h1>portfolio</h1>
+            <div class="swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="./assets/image/img1.webp" >
+                        <h2 class="titre">integration HTML/CSS d'une agance de location</h2>
+                        <a id="github-view" href="https://github.com/airwin17/opcl-projet2-frontend">
+                            <i class="fa-brands fa-github"></i>
+                            <p>voir sur github</p>
+                        </a>
+                    </div>
+                    <div class="swiper-slide">Slide 2</div>
+                    <div class="swiper-slide">Slide 3</div>
+                </div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+            
+        </section>
+        
         <section id="contact"></section>
     </main>
 </body>

@@ -1,0 +1,64 @@
+.swiper {
+    width: 100%;
+    height: fit-content;
+  }
+  #github-view{
+    position: absolute;
+    bottom: 50px;
+    background-color: blueviolet;
+}
+
+
+#gallery{
+width: 100%;
+
+    .arrow{
+        
+        border: 0;
+        top: 0;
+        bottom: 0;
+        position: absolute;
+        background-color: rgba(0, 0, 0, 0.205);
+        width: fit-content;
+        padding: 25px;
+        margin: 0;
+        &:hover{
+            cursor: pointer;
+        }
+        > i{
+            font-size: 60px;
+            color: rgba(255, 255, 255, 0.747);
+
+        }
+    }
+    #right{
+        right: 0;
+    }
+    #left{
+        left: 0;
+    }
+    
+
+}
+.gallery-item{
+    
+    &:hover{
+        backdrop-filter: blur(10px);
+    }
+}
+#gallery-container{
+    overflow-y: hidden;
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+    position: relative;
+    
+}
+.titre{
+    position: absolute;
+    top: 45%;
+    right: 0;
+    left: 0;
+    text-align: center;
+    color: white;
+    
+}

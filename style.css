@@ -1,5 +1,5 @@
 .list-div {
-  color: var(--background-solid);
+  color: var(--background-text);
 }
 
 .list > li {
@@ -17,19 +17,31 @@
 }
 
 nav {
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  width: var(--navWidth);
-  height: 100%;
   position: fixed;
   left: 0;
   top: 0;
   bottom: 0;
+}
+
+#theme-but {
+  background-color: var(--background);
+  border: 0;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.nav {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  width: var(--navWidth);
+  /*height: 100%;*/
   justify-content: center;
   /*box-shadow: 2px 7px 0px rgba(0,0,0,0.2);*/
 }
-nav > a > i {
+.nav > a > i {
   margin: 5px 5px 0px 5px;
   font-size: var(--normalIcon);
   height: 30px;
@@ -38,7 +50,7 @@ nav > a > i {
   animation-iteration-count: 1;
   animation-timing-function: linear;
 }
-nav > a > i:hover {
+.nav > a > i:hover {
   font-size: calc(var(--normalIcon) + 5px);
   animation-name: reverseIconAnimation;
   animation-duration: 150ms;
@@ -124,7 +136,65 @@ nav > a > i:hover {
   padding: 10px;
 }
 
-i, nav > a > i {
+.swiper {
+  width: 100%;
+  height: fit-content;
+}
+
+#github-view {
+  position: absolute;
+  bottom: 50px;
+  background-color: blueviolet;
+}
+
+#gallery {
+  width: 100%;
+}
+#gallery .arrow {
+  border: 0;
+  top: 0;
+  bottom: 0;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.205);
+  width: fit-content;
+  padding: 25px;
+  margin: 0;
+}
+#gallery .arrow:hover {
+  cursor: pointer;
+}
+#gallery .arrow > i {
+  font-size: 60px;
+  color: rgba(255, 255, 255, 0.747);
+}
+#gallery #right {
+  right: 0;
+}
+#gallery #left {
+  left: 0;
+}
+
+.gallery-item:hover {
+  backdrop-filter: blur(10px);
+}
+
+#gallery-container {
+  overflow-y: hidden;
+  overflow-x: scroll;
+  scroll-behavior: smooth;
+  position: relative;
+}
+
+.titre {
+  position: absolute;
+  top: 45%;
+  right: 0;
+  left: 0;
+  text-align: center;
+  color: white;
+}
+
+i, .nav > a > i {
   color: var(--background-solid);
   margin-bottom: 0;
 }
@@ -174,8 +244,8 @@ html {
 
 body {
   background-color: var(--background);
-  margin-left: calc(var(--navWidth));
-  margin-right: calc(var(--mediaWidth));
+  margin-left: calc(var(--navWidth) + 50px);
+  margin-right: calc(var(--mediaWidth) + 50px);
   margin-top: 0;
 }
 
