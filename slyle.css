@@ -7,15 +7,15 @@
 }
 
 :root {
-  --left-margin:170px;
+  --left-margin:50px;
 }
 
-#scrollbar {
+.swiper-scrollbar-drag {
   left: var(--left-margin);
 }
 
-.swiper-slide {
-  margin-left: calc(var(--left-margin) + 10px);
+#ftitle {
+  margin: 60px;
 }
 
-/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=slyle.css.map */

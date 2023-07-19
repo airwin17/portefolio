@@ -5,3 +5,12 @@
 *{
     font-family: "ubuntu";
 }
+:root{
+    --left-margin:170px;
+}
+#scrollbar{
+    left: var(--left-margin);
+}
+.swiper-slide{
+    margin-left: calc(var(--left-margin) + 10px);
+}
