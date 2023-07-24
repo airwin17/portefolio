@@ -1,16 +1,53 @@
+@import "./slides/slide1.scss";
+@import "./slides/slide2.scss";
+@import "./slides/slide3.scss";
 @font-face {
     font-family: "ubuntu";
     src: url("./ubuntuFont/Ubuntu-Regular.ttf");
+}
+
+body{
+    margin: 0;
 }
 *{
     font-family: "ubuntu";
 }
 :root{
-    --left-margin:170px;
+    --left-margin:200px;
+    --margin-text:300px;
+}
+.envelope{
+    position: relative;
+}
+.filter{
+    background-color: white;
+    display: block;
+    top: 0;
+    bottom: 0;
+    position: absolute;
+}
+p{
+    font-size: 14px;
+}
+h1{
+    font-size: 18px;
+}
+h2{
+    font-size: 16px;
 }
 #scrollbar{
     left: var(--left-margin);
 }
 .swiper-slide{
-    margin-left: calc(var(--left-margin) + 10px);
+    margin: 0;
+    position:relative;
+    .text-container{
+        position: absolute;
+        left: calc(var(--left-margin) + var(--margin-text));
+        top: 50%;
+        width: 100%;
+        transform: translateY(-50%);
+    }
 }
+
+

@@ -1,13 +1,98 @@
+#slide1 {
+  background-color: rgb(0, 0, 0);
+  color: white;
+}
+#slide1 .envelope {
+  color: black;
+}
+#slide1 h1 {
+  font-size: 18px;
+}
+#slide1 p {
+  width: 800px;
+  font-size: 14px;
+}
+#slide1 #contact {
+  display: flex;
+}
+#slide1 #contact a {
+  margin: 0 20px;
+}
+#slide1 #contact i {
+  font-size: 30px;
+  color: white;
+}
+
+#slide2 .filter {
+  background-color: black;
+  display: block;
+  top: 0;
+  bottom: 0;
+  position: absolute;
+}
+#slide2 .envelope {
+  color: white;
+}
+#slide2 p {
+  font-size: 14px;
+}
+
+#slide3 .filter {
+  background-color: black;
+  display: block;
+  top: 0;
+  bottom: 0;
+  position: absolute;
+}
+#slide3 .envelope {
+  color: white;
+}
+#slide3 a {
+  font-size: 14px;
+}
+#slide3 ul {
+  list-style: none;
+}
+
 @font-face {
   font-family: "ubuntu";
   src: url("./ubuntuFont/Ubuntu-Regular.ttf");
 }
+body {
+  margin: 0;
+}
+
 * {
   font-family: "ubuntu";
 }
 
 :root {
-  --left-margin:170px;
+  --left-margin:200px;
+  --margin-text:300px;
+}
+
+.envelope {
+  position: relative;
+}
+
+.filter {
+  background-color: white;
+  display: block;
+  top: 0;
+  bottom: 0;
+  position: absolute;
+}
+
+p {
+  font-size: 14px;
+}
+
+h1 {
+  font-size: 18px;
+}
+
+h2 {
+  font-size: 16px;
 }
 
 #scrollbar {
@@ -15,7 +100,15 @@
 }
 
 .swiper-slide {
-  margin-left: calc(var(--left-margin) + 10px);
+  margin: 0;
+  position: relative;
+}
+.swiper-slide .text-container {
+  position: absolute;
+  left: calc(var(--left-margin) + var(--margin-text));
+  top: 50%;
+  width: 100%;
+  transform: translateY(-50%);
 }
 
 /*# sourceMappingURL=style.css.map */

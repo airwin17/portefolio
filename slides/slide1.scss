@@ -1,0 +1,26 @@
+#slide1{
+    background-color: rgb(0, 0, 0);
+    color: white;
+    
+    .envelope{
+        color:black;
+    }
+    h1{
+        font-size: 18px;
+    }
+    p{
+        width: 800px;
+        font-size: 14px;
+    }
+    #contact{
+        display: flex;
+        a{
+            margin: 0 20px;
+        }
+        i{
+            font-size: 30px;
+            color: white;
+        }
+    }
+
+}
