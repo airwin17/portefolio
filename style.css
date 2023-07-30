@@ -37,6 +37,30 @@
   font-size: 14px;
 }
 
+#slide3 .work {
+  display: grid;
+  grid-template-columns: min-content auto;
+  align-items: center;
+}
+#slide3 .work i {
+  grid-column: 1/2;
+  margin: 10px;
+  opacity: 0;
+}
+#slide3 .work h2 {
+  grid-column: 2/3;
+}
+#slide3 .work div {
+  grid-column: 2/3;
+  grid-row: 2/3;
+  width: 100%;
+  display: none;
+}
+#slide3 .work a {
+  grid-column: 2/3;
+  grid-row: 3/4;
+  display: none;
+}
 #slide3 .filter {
   background-color: black;
   display: block;
@@ -46,6 +70,9 @@
 }
 #slide3 .envelope {
   color: white;
+}
+#slide3 p {
+  font-size: 14px;
 }
 #slide3 a {
   font-size: 14px;
@@ -78,13 +105,22 @@ body {
   font-family: "ubuntu";
 }
 
+.bureau {
+  display: none;
+}
+
+.mobile {
+  display: none;
+}
+
 :root {
-  --left-margin:200px;
-  --margin-text:300px;
+  --margin-text:20%;
+  --left-margin:10%;
 }
 
 .envelope {
   position: relative;
+  margin-top: 10px;
 }
 
 .filter {
@@ -123,6 +159,10 @@ h2 {
   transform: translateY(-50%);
 }
 
+.expand {
+  display: none;
+}
+
 @media (max-width: 1280px) {
   :root {
     --margin-text:10%;
@@ -133,9 +173,6 @@ h2 {
   :root {
     --left-margin:0px;
     --margin-text:10px;
-  }
-  p {
-    font-size: 12px;
   }
 }
 

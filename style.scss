@@ -12,12 +12,19 @@ body{
 *{
     font-family: "ubuntu";
 }
+.bureau{
+    display: none;
+}
+.mobile{
+    display: none;
+}
 :root{
-    --left-margin:200px;
-    --margin-text:300px;
+    --margin-text:20%;
+    --left-margin:10%;
 }
 .envelope{
     position: relative;
+    margin-top: 10px;
 }
 .filter{
     background-color: white;
@@ -50,6 +57,9 @@ h2{
     }
     
 }
+.expand{
+    display: none;
+}
 @media (max-width:1280px) {
     :root{
         --margin-text:10%;
@@ -60,9 +70,6 @@ h2{
     :root{
         --left-margin:0px;
         --margin-text:10px;
-    }
-    p{
-        font-size: 12px;
     }
 }
 
