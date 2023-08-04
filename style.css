@@ -73,6 +73,12 @@
 }
 #slide3 p {
   font-size: 14px;
+  width: 70%;
+}
+@media (max-width: 850px) {
+  #slide3 p {
+    width: 90%;
+  }
 }
 #slide3 a {
   font-size: 14px;
